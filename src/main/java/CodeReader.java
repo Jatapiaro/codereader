@@ -28,6 +28,8 @@ public class CodeReader {
             String s;
             while((s = br.readLine()) != null) {
                 s = s.trim();
+                /// Quita contenido dentro de strings s=" /* algo */"
+                //Evitando que lea los caracteres de comentario dentro de un string
                 s = s.replaceAll("\".+?\"", "\"\"");
                 sb.append(s+"\n");
             }
