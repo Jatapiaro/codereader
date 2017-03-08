@@ -28,6 +28,7 @@ public class CodeReader {
             String s;
             while((s = br.readLine()) != null) {
                 s = s.trim();
+                s = s.replaceAll("\".+?\"", "\"\"");
                 sb.append(s+"\n");
             }
             String si = sb.toString();
